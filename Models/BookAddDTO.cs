@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace BookLibraryBE.Models
+﻿namespace BookLibraryBE.Models
 {
-    public class Book
+    public class BookAddDTO
     {
-        [Key]
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public string Description { get; set; }

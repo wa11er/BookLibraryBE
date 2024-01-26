@@ -1,5 +1,7 @@
 using BookLibraryBE.Data;
+using BookLibraryBE.Interfaces;
 using BookLibraryBE.Options;
+using BookLibraryBE.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +27,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Register service in dependency injection
+builder.Services.AddScoped<IBookService, BookService>();
 
 var app = builder.Build();
 

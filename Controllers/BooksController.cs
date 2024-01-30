@@ -8,11 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using BookLibraryBE.Data;
 using BookLibraryBE.Models;
 using BookLibraryBE.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookLibraryBE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly AppDbContext _context;
